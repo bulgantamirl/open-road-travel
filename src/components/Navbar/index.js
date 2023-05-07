@@ -28,7 +28,7 @@ export default function Navbar() {
                 <Link  href={'/trips'}>
                     Trips
                 </Link>
-                <Link  href={'/info'}>
+                <Link  href={'/'}>
                     Info
                 </Link>
                 <Link  href={'/'}>

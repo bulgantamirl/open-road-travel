@@ -18,21 +18,23 @@ import eagle from "../../public/assets/landing/card4.png"
 import howsgol from "../../public/assets/landing/card1.png"
 import tsonjin from "../../public/assets/landing/card3.png"
 import CardItem from "@/components/CardItem";
+import Link from "next/link";
 
 export default function Landing() {
   return (
     <div className={`flex w-full max-w-[100vw] relative flex z-0 flex-col`}>
-
-
         <section className={'w-full h-[100vh] max-h-[100vh] overflow-y-hidden flex flex-col items-center justify-center text-white relative z-1'}>
             <Image src={landingBg} alt={""} className={'w-full max-w-full top-0 left-0 right-0 z-0 absolute'} />
             <div className={'h-full w-full flex flex-col items-center justify-center text-white relative z-1'}>
                 <div className={'flex flex-col items-center gap-4 w-[600px]'}>
                     <h2 className={'text-xs self-start '}>Open Road Travel</h2>
                     <h1 className={'text-6xl font-semibold'} > Travel MONGOLIA</h1>
-                    <Button>
-                        Let&apos;s <span className={'font-bold'}> TOUR </span> <Image src={arrowLeft} alt={""} />
-                    </Button>
+                    <Link href={'/trips'} >
+                        <Button>
+                            Let&apos;s <span className={'font-bold'}> TOUR </span> <Image src={arrowLeft} alt={""} />
+                        </Button>
+                    </Link>
+
                 </div>
                 <Image className={'w-[130px] absolute right-[250px] '} src={mongolBichig} alt={""} />
             </div>
@@ -122,9 +124,12 @@ export default function Landing() {
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </p>
-                <Button style={{padding: '15px 125px', color: 'white'}}>
-                    Contact us
-                </Button>
+                <Link href={'https://docs.google.com/forms/d/e/1FAIpQLSeRSZ-_D-hQO-IbqBGe9-fLAFoz-69a1xDEOhn0wdjKjBePIg/viewform'} target={"_blank"}>
+                    <Button style={{padding: '15px 125px', color: 'white'}}>
+                        Contact us
+                    </Button>
+                </Link>
+
             </div>
             <div className={'flex flex-row gap-6 items-center'}>
                 <div className={'flex flex-col flex-wrap gap-6 w-full '}>

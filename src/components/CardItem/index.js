@@ -4,7 +4,7 @@ import icon from "../../../public/assets/map.svg";
 
 export default function CardItem({src, text, days, ...props}) {
     return (
-        <div className={`flex flex-col rounded-[24px] w-[250px] h-[240px] bg-white overflow-hidden border-gray-100 border`} {...props}>
+        <div className={`flex flex-col rounded-[24px] w-[250px] h-[240px] bg-white shadow overflow-hidden border-gray-100 border`} {...props}>
             <Image className={'w-full h-[150px] object-cover'} src={src} alt={''} />
             <div className={'flex flex-col gap-1 items-start bg-white p-3'}>
                 <h3 className={'text-2xl font-bold'}>

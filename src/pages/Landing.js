@@ -38,7 +38,7 @@ export default function Landing() {
                 </div>
                 <Image className={'w-[130px] absolute right-[250px] '} src={mongolBichig} alt={""} />
             </div>
-            <div style={{boxShadow: "0px 10px 10px 0px #CFCFCF40"}} className={'relative max-w-[950px] w-full p-24 h-[125px] z-1 bg-white rounded-[12px]'}>
+            <div style={{boxShadow: "0px 10px 10px 0px #CFCFCF40"}} className={'relative max-w-[950px] mb-[100px] w-full p-24 h-[125px] z-1  bg-white rounded-[12px]'}>
                 Open travel mongolia
             </div>
         </section>

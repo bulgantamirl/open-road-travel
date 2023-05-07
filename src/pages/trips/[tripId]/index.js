@@ -112,7 +112,7 @@ export default function TripSingle() {
                 <h3  className={'font-bold text-5xl text-[#FF9F47]'}>
                     Trips
                 </h3>
-                <div className={'w-full flex flex-row flex-wrap '}>
+                <div className={'w-full flex flex-row gap-6 flex-wrap '}>
                     {
                         trips?.map((item, idx)=> {
                             return (

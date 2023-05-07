@@ -24,3 +24,11 @@ h2 {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+.activeLink {
+  background-color: #FF9F47;
+}
+.link {
+  padding: 6px 12px;
+  font-weight: 400;
+  border-radius: 16px;
+}

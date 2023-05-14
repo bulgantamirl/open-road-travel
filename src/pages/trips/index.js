@@ -2,14 +2,17 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Navbar from "@/components/Navbar";
+import { useRouter } from 'next/router';
 import cardDef from "../../../public/assets/landing/tripCardDef.png";
 import Button from "@/components/Button";
 import Link from "next/link";
-import { trips } from '../../utils/index'
+import { tripsEn, tripsGr } from '../../utils/index'
 import CardTrip from "@/components/CardTrip";
 import Footer from "@/components/Footer";
 export default function Trips() {
-    console.log(trips)
+    const { locale } = useRouter();
+    const isEng = locale === 'en';
+    const trips = isEng ? tripsEn : tripsGr;
   return (
       <>
         <Navbar />

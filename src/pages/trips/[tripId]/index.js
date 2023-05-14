@@ -15,10 +15,12 @@ import send from "../../../../public/assets/send.svg"
 import CardTrip from "@/components/CardTrip";
 import cardDef from "../../../../public/assets/landing/tripCardDef.png";
 import Footer from "@/components/Footer";
+import useTranslation from "next-translate/useTranslation";
 
 export default function TripSingle() {
     const router = useRouter().query;
     const tripItem = trips.find((item => item.id === router.tripId))
+    const { t } = useTranslation('common');
     console.log(router, tripItem)
     return (
         <div className={'w-full'}>
@@ -121,7 +123,7 @@ export default function TripSingle() {
 
             <div className={'mt-[200px] max-w-[1200px] mx-6 lg:mx-auto flex flex-col gap-10 my-[150px] justify-between'}>
                 <h3  className={'font-bold text-5xl text-[#FF9F47]'}>
-                    Trips
+                    {t('trips')}
                 </h3>
                 <div className={'w-full flex flex-row gap-6 flex-wrap '}>
                     {

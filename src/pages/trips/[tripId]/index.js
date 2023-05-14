@@ -4,7 +4,8 @@ import Navbar from "@/components/Navbar";
 import bg from "../../../../public/assets/landing/grid5.png";
 import mapBig from "../../../../public/assets/landing/mapBig.png";
 import {useRouter} from "next/router";
-import {trips} from "@/utils";
+import {tripsEn} from "@/utils";
+import {tripsGr} from "@/utils/german";
 import moon from "../../../../public/assets/moon.svg"
 import sun from "../../../../public/assets/sun.svg"
 import map from "../../../../public/assets/map-black.svg"
@@ -18,7 +19,10 @@ import Footer from "@/components/Footer";
 import useTranslation from "next-translate/useTranslation";
 
 export default function TripSingle() {
+    const { locale } = useRouter();
+    const isEng = locale === 'en';
     const router = useRouter().query;
+    const trips = isEng ? tripsEn : tripsGr;
     const tripItem = trips.find((item => item.id === router.tripId))
     const { t } = useTranslation('common');
     console.log(router, tripItem)

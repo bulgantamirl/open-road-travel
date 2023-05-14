@@ -17,8 +17,8 @@ export default function Trips() {
       <>
         <Navbar />
         <div className={`w-full h-[80px] relative bg-black  flex z-0 flex-col`}></div>
-        <div className={`flex w-full max-w-[100vw] relative z-0 flex-col`}>
-          <section className={'w-full py-[100px] gap-24 flex flex-row items-center justify-center text-black relative z-1'}>
+        <div className={`flex w-full max-w-[100vw] relative z-0 flex-col items-center`}>
+          <section className={'w-full max-w-[1200px] py-[100px] gap-24 flex flex-row flex-wrap items-center justify-items-start text-black relative z-1'}>
               {
                   trips?.map((item, idx)=> {
                       return (

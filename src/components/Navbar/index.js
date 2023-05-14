@@ -27,15 +27,15 @@ export default function Navbar() {
     console.log(urlString)
     return (
         <div style={{transition: '0.3s ease'}} className={`flex w-full max-w-[100vw]  fixed top-0 left-0 text-white right-0 ${scrolling ? ' border-b-gray-300 border-b-2 bg-white h-[70px]': 'bg-transparent h-[80px]'}  flex-row justify-between px-12 items-center z-10`}>
-            <Link className={'justify-self-start'} href={'/'}>
+            <Link className={'justify-self-start min-w-[150px]'} href={'/'}>
                 {
                     scrolling ?
-                        <Image className={'w-[150px]'} src={logoBlack} alt={""} />
+                        <Image className={'w-[200px]'} src={logoBlack} alt={""} />
                         :
-                        <Image className={'w-[150px]'} src={logo} alt={""} />
+                        <Image className={'w-[200px]'} src={logo} alt={""} />
                 }
             </Link>
-            <div className={scrolling ? 'flex flex-row gap-8 text-black text-sm' : `flex flex-row gap-8 text-white text-sm`}>
+            <div className={scrolling ? 'flex flex-row gap-8 text-black text-sm' : `flex flex-row gap-2 lg:gap-8 text-white text-sm`}>
                 <Link className={urlString.includes('trips') ? 'activeLink link' : 'link'} href={'/trips'}>
                     {t('trips')}
                 </Link>

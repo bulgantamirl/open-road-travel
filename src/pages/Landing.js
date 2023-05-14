@@ -26,15 +26,15 @@ export default function Landing() {
     const { t } = useTranslation('common');
   return (
     <div className={`flex w-full max-w-[100vw] relative flex z-0 flex-col`}>
-        <section className={'w-full h-[100vh] max-h-[100vh] overflow-y-hidden flex flex-col items-center justify-center text-white relative z-1'}>
-            <Image src={landingBg} alt={""} className={'w-full max-w-full top-0 left-0 right-0 z-0 absolute'} />
+        <section className={'w-full px-12 h-[600px] md:h-[700px] lg:h-[100vh] max-h-[100vh] overflow-y-hidden flex flex-col items-center justify-center text-white relative z-1'}>
+            <Image src={landingBg} alt={""} className={'h-full  w-full max-w-full object-cover top-0 left-0 right-0 z-0 absolute'} />
             <div className={'h-full w-full flex flex-col items-center justify-center text-white relative z-1'}>
-                <div className={'flex flex-col items-center gap-4 w-[600px]'}>
-                    <h2 className={'text-xs self-start '}>Open Road Travel</h2>
-                    <h1 className={'text-6xl font-semibold'} > {t('travelMongolia')}</h1>
+                <div className={'flex flex-col items-center gap-4 md:w-[400px] lg:w-[600px]'}>
+                    <h2 className={'text-xs self-start'}>Open Road Travel</h2>
+                    <h1 className={'sm:text-xl md:text-3xl lg:text-6xl font-semibold'} > {t('travelMongolia')}</h1>
                     <Link href={'/trips'} >
                         <Button >
-                            <span className={"font-bold"}>
+                            <span className={"font-bold text-md md:text-xl lg:text-2xl"}>
                                 {t('explore')}
                             </span>
                              <Image src={arrowLeft} alt={""} />
@@ -42,13 +42,13 @@ export default function Landing() {
                     </Link>
 
                 </div>
-                <Image className={'w-[130px] absolute right-[250px] '} src={mongolBichig} alt={""} />
+                <Image className={'right-4 w-[45px] sm:w-[60px] md:w-[90px] lg:w-[100px] xl:w-[120px] absolute md:right-[100px] sm:right-[30px] lg:right-[120px] xl:right-[170px]'} src={mongolBichig} alt={""} />
             </div>
-            <div style={{boxShadow: "0px 10px 10px 0px #CFCFCF40"}} className={'relative font-semibold max-w-[750px] text-xl mb-[100px] w-full px-24 h-[150px] text-black items-center justify-center z-1 flex flex-col  bg-white rounded-[12px]'}>
+            <div style={{boxShadow: "0px 10px 10px 0px #CFCFCF40"}} className={'relative font-semibold max-w-[750px] text-xl mb-[30px] lg:mb-[70px] xl:mb-[100px] w-full px-12 lg:px-24 h-[150px] text-black items-center justify-center z-1 flex flex-col  bg-white rounded-[12px]'}>
                 {t('create')}
             </div>
         </section>
-        <section className={'w-full py-[180px] gap-24 flex flex-row items-center justify-center text-black relative z-1'}>
+        <section className={'w-full py-[180px] gap-24 flex flex-col lg:flex-row items-center justify-center text-black relative z-1'}>
             <div className={'w-[650px] flex flex-col items-end gap-[50px]'}>
                 <h2 className={'text-6xl'}>
                     Die beste Zeit für die Reise in die Mongolei
@@ -79,7 +79,7 @@ export default function Landing() {
                 <Image className={'w-[400px]'} src={kazaksd} alt={""} />
             </div>
         </section>
-        <section className={'w-full py-[180px] gap-24 flex flex-row items-center justify-center text-black relative z-1'}>
+        <section className={'w-full py-[180px] gap-24 flex flex-col lg:flex-row items-center justify-center text-black relative z-1'}>
             <div className={'w-[400px] flex flex-col items-end gap-[50px]'}>
 
                 <Image className={'w-[400px]'} src={uhamsar} alt={""} />
@@ -111,7 +111,7 @@ export default function Landing() {
             </button>
         </section>
         <section className={'w-full py-[170px] gap-20 flex flex-col items-center text-black relative z-1'}>
-            <h3 className={'text-5xl '}>
+            <h3 className={'text-5xl font-semibold italic'}>
                 Open travel mongolia
             </h3>
             <div className={'max-w-[1250px] flex grid grid-cols-3 gap-4 w-full '}>
@@ -122,7 +122,7 @@ export default function Landing() {
                 <Image className={'col-span-3'} src={grid5} alt={""} />
             </div>
         </section>
-        <section className={'w-full max-h-[1300px] py-[70px] gap-12 flex flex-row justify-center items-center  text-black relative z-1'}>
+        <section className={'w-full max-h-[1300px] py-[70px] gap-12 flex flex-col lg:flex-row justify-center items-center  text-black relative z-1'}>
             <div className={'flex flex-col gap-6 max-w-[450px]'}>
                 <h3 className={'text-6xl font-semibold'}>
                   Travel MONGOLIA

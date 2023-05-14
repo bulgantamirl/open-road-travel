@@ -1,7 +1,11 @@
-
+import trip1Main from '/public/assets/trips/trip1Main.jpg'
+import trip1_2 from '/public/assets/trips/trip1-2.jpg'
+import trip1_3 from '/public/assets/trips/trip1-3.jpg'
+import trip1_4 from '/public/assets/trips/trip1-4.jpg'
 export const trips = [
     {
         id: 'trip1',
+        mainImg: trip1Main,
         name: 'Angeln und Pferderitt tour zu Khagiin Har See',
         desc: 'Diese Reise ist ein Ausritt durch das besondere Schutzgebiet des Khan Khenti-Gebirges entlang des Kamms des Khenti-Gebirges. Um den Ort zu erreichen, reisen Sie zu Pferd in die wilde Wildnis, erleben die Schönheit der Natur näher und passieren hohe Berge, Flüsse und Wälder.',
         desc2: 'Es ist auch eine Reise, die etwas Besonderes ist, als nur zu einem Ort zu fahren, an dem Sie Wildtiere beobachten können. Die Besonderheit der Reise ist, den Tag an den Ufern von Flüssen und Seen zu verbringen.',
@@ -24,6 +28,11 @@ export const trips = [
             '9.Tag: Am letzten Tag reiten wir zurück zu Pferdebesitzerfamilie. Pferde Übergabe. Besuch und Bekanntschaft mit der Mongolischen Bräuchen und Kultur. Abschiedsabend. (Zelt Übernachtung)',
             '10.Tag: Fahrt nach Ulaanbaatar. Unterkommen im Hotel. Einkaufsmöglichkeit von mongolischen berühmten Cashmer. Besuch in Nationales Folklorekonzert und Abendessen. (Hotel Übernachtung)',
             '11.Tag: Abfahrt zu Flughafen. Abflug'
+        ],
+        images: [
+            trip1_2,
+            trip1_3,
+            trip1_4
         ]
     },
     {

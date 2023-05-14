@@ -6,11 +6,12 @@ import ig from "../../../public/assets/ig.svg"
 import telegram from "../../../public/assets/telegram.svg"
 import logoBlack from "../../../public/assets/logoBlack.svg"
 import {useEffect, useState} from "react";
+import useTranslation from "next-translate/useTranslation";
 
 
 export default function Footer() {
     const [urlString, setUrlString]= useState('');
-
+    const { t } = useTranslation('common');
     return (
         <div style={{transition: '0.3s ease'}} className={`flex bg-white w-full mt-[60px] bottom-0 left-0 text-white right-0 h-[280px] border-t-2 border-gray-300 py-[40px]  flex-col justify-between px-12 z-10`}>
             <div className={'flex flex-row justify-between items-center'}>
@@ -22,20 +23,20 @@ export default function Footer() {
                     </p>
                 </Link>
                 <div className={'flex flex-row gap-8 text-black font-semibold text-sm'}>
-                    <Link  href={'/trips'}>
-                        Trips
+                    <Link className={urlString.includes('trips') ? 'activeLink link' : 'link'} href={'/trips'}>
+                        {t('trips')}
                     </Link>
-                    <Link href={'/info'}>
-                        Info
+                    <Link className={urlString.includes('info') ? 'activeLink link' : 'link'} href={'/info'}>
+                        {t('info')}
                     </Link>
-                    <Link  href={'/blogs'}>
-                        Blogs & Articles
+                    <Link className={urlString.includes('blog') ? 'activeLink link' : 'link'} href={'/blogs'}>
+                        {t('blogs')}
                     </Link>
-                    <Link  href={'/aboutUs'}>
-                        About us
+                    <Link className={urlString.includes('aboutUs') ? 'activeLink link' : 'link'} href={'/aboutUs'}>
+                        {t('aboutUs')}
                     </Link>
-                    <Link  href={'/contact'}>
-                        Contact
+                    <Link className={urlString.includes('contact') ? 'activeLink link' : 'link'} href={'/contact'}>
+                        {t('contact')}
                     </Link>
                 </div>
             </div>

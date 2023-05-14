@@ -7,6 +7,7 @@ import Button from "@/components/Button";
 import Link from "next/link";
 import { trips } from '../../utils/index'
 import CardTrip from "@/components/CardTrip";
+import Footer from "@/components/Footer";
 export default function Trips() {
     console.log(trips)
   return (
@@ -23,6 +24,7 @@ export default function Trips() {
               }
           </section>
         </div>
+          <Footer />
       </>
   );
 }

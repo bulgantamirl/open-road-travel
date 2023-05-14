@@ -14,6 +14,7 @@ import home from "../../../../public/assets/home.svg"
 import send from "../../../../public/assets/send.svg"
 import CardTrip from "@/components/CardTrip";
 import cardDef from "../../../../public/assets/landing/tripCardDef.png";
+import Footer from "@/components/Footer";
 
 export default function TripSingle() {
     const router = useRouter().query;
@@ -121,6 +122,7 @@ export default function TripSingle() {
                     }
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }

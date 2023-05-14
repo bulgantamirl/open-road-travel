@@ -19,8 +19,11 @@ import howsgol from "../../public/assets/landing/card1.png"
 import tsonjin from "../../public/assets/landing/card3.png"
 import CardItem from "@/components/CardItem";
 import Link from "next/link";
+import Footer from "@/components/Footer";
+import useTranslation from 'next-translate/useTranslation';
 
 export default function Landing() {
+    const { t } = useTranslation('common');
   return (
     <div className={`flex w-full max-w-[100vw] relative flex z-0 flex-col`}>
         <section className={'w-full h-[100vh] max-h-[100vh] overflow-y-hidden flex flex-col items-center justify-center text-white relative z-1'}>
@@ -28,18 +31,21 @@ export default function Landing() {
             <div className={'h-full w-full flex flex-col items-center justify-center text-white relative z-1'}>
                 <div className={'flex flex-col items-center gap-4 w-[600px]'}>
                     <h2 className={'text-xs self-start '}>Open Road Travel</h2>
-                    <h1 className={'text-6xl font-semibold'} > Travel MONGOLIA</h1>
+                    <h1 className={'text-6xl font-semibold'} > {t('travelMongolia')}</h1>
                     <Link href={'/trips'} >
-                        <Button>
-                            Let&apos;s <span className={'font-bold'}> TOUR </span> <Image src={arrowLeft} alt={""} />
+                        <Button >
+                            <span className={"font-bold"}>
+                                {t('explore')}
+                            </span>
+                             <Image src={arrowLeft} alt={""} />
                         </Button>
                     </Link>
 
                 </div>
                 <Image className={'w-[130px] absolute right-[250px] '} src={mongolBichig} alt={""} />
             </div>
-            <div style={{boxShadow: "0px 10px 10px 0px #CFCFCF40"}} className={'relative max-w-[950px] mb-[100px] w-full p-24 h-[125px] z-1  bg-white rounded-[12px]'}>
-                Open travel mongolia
+            <div style={{boxShadow: "0px 10px 10px 0px #CFCFCF40"}} className={'relative font-semibold max-w-[750px] text-xl mb-[100px] w-full px-24 h-[150px] text-black items-center justify-center z-1 flex flex-col  bg-white rounded-[12px]'}>
+                {t('create')}
             </div>
         </section>
         <section className={'w-full py-[180px] gap-24 flex flex-row items-center justify-center text-black relative z-1'}>
@@ -122,7 +128,7 @@ export default function Landing() {
                   Travel MONGOLIA
                 </h3>
                 <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Die beste Zeit für die Reise in die Mongolei
                 </p>
                 <Link href={'https://docs.google.com/forms/d/e/1FAIpQLSeRSZ-_D-hQO-IbqBGe9-fLAFoz-69a1xDEOhn0wdjKjBePIg/viewform'} target={"_blank"}>
                     <Button style={{padding: '15px 125px', color: 'white'}}>
@@ -146,6 +152,7 @@ export default function Landing() {
 
 
         </section>
+        <Footer />
     </div>
   );
 }

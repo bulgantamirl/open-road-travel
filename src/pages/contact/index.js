@@ -10,9 +10,14 @@ import iconEdit from "../../../public/assets/iconEdit.png";
 import Button from "@/components/Button";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import Head from "next/head";
 export default function ContactUs() {
+    const { t } = useTranslation('common');
     return (
         <>
+            <Head>
+                <title>{t('contact')}</title>
+            </Head>
             <Navbar />
             <div className={`w-full h-[80px] relative bg-black  flex z-0 flex-col`}></div>
             <div className={`flex w-full max-w-[100vw] relative flex z-0 flex-col`}>

@@ -130,7 +130,7 @@ export default function Landing() {
                 <p>
                     Die beste Zeit für die Reise in die Mongolei
                 </p>
-                <Link href={'https://docs.google.com/forms/d/e/1FAIpQLSeRSZ-_D-hQO-IbqBGe9-fLAFoz-69a1xDEOhn0wdjKjBePIg/viewform'} target={"_blank"}>
+                <Link href={'https://docs.google.com/forms/d/e/1FAIpQLSenxHRBsHc7RQxVXkmyICsFcUyfElR1MAtiPN8hbRfhuzYGPA/viewform'} target={"_blank"}>
                     <Button style={{padding: '15px 125px', color: 'white'}}>
                         Contact us
                     </Button>

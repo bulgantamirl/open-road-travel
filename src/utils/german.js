@@ -432,7 +432,7 @@ export const tripsGr = [
   },
   {
     id: "trip8",
-    name: "Das Volk der Tsaatan leben mit ihren Rentieren in der wunderschöne Natur, welches im nördlichen Teil der Mongolei befindet, in der Provinz Khuvsgul. Die Menschen der Taiga, die 4 Jahreszeiten lang in der großen Taiga von Khuvsgul leben, werden Tsaatans genannt. ",
+    name: "Rundreise durch Hangai Gebiet Huvsgul aimag, Schamane, Rentierzüchter",
     mainImg: trip8_Main,
     desc: "Diese Reise ist ein Ausritt durch das besondere Schutzgebiet des Khan Khenti-Gebirges entlang des Kamms des Khenti-Gebirges. Um den Ort zu erreichen, reisen Sie zu Pferd in die wilde Wildnis, erleben die Schönheit der Natur näher und passieren hohe Berge, Flüsse und Wälder.",
     desc2:

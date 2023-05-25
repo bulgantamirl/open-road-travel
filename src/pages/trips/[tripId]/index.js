@@ -35,7 +35,7 @@ export default function TripSingle() {
             <div className={`flex w-full max-w-[100vw] relative flex z-0 flex-col`}>
                 <section className={'w-full py-[80px] gap-24 flex flex-col lg:flex-row items-center lg:items-start lg:justify-center text-black relative z-1'}>
                     <div className={'max-w-[520px] flex flex-col gap-4 items-start'}>
-                        <h2 className={'font-semibold text-5xl'}>
+                        <h2 className={'font-semibold text-4xl'}>
                             {tripItem?.name}
                         </h2>
                         <p className={'text-[#6F6F6F] text-base'}>
@@ -45,52 +45,56 @@ export default function TripSingle() {
                             {tripItem?.desc2}
                         </p>
                         <div className={'flex flex-col gap-1'}>
-                            <div className={'flex flex-row gap-4 text-black font-semibold'}>
+                            <div className={'flex flex-row gap-4 text-black items-center  font-semibold'}>
                                 <div className={'flex flex-row gap-2'}>
                                     <Image src={moon} alt={''} />
-                                    <span className={'text-[#FF9F47]'}>{tripItem?.nights} </span>
+                                    <span className={'text-[#FF9F47]'}>{tripItem?.nights || 0} </span>
                                 </div>
                                 <div className={'flex flex-row gap-2'}>
                                     <Image src={sun} alt={''} />
-                                    <span className={'text-[#FF9F47]'}>{tripItem?.days} </span>
+                                    <span className={'text-[#FF9F47]'}>{tripItem?.days || 0} </span>
                                 </div>
                             </div>
-                            <div className={'flex flex-row gap-4 text-black font-semibold'}>
+                            <div className={'flex flex-row gap-4 text-black items-center font-semibold'}>
                                 <span className={'flex flex-row gap-2'}>
                                     <Image src={map} alt={''} />
-                                     Termin:
+                                    {t('tripDesc.date')}:
                                 </span>
 
                                 <span className={'text-[#FF9F47]'}>{tripItem?.meeting} </span>
                             </div>
-                            <div className={'flex flex-row gap-4 text-black font-semibold'}>
+                            <div className={'flex flex-row gap-4 text-black items-center  font-semibold'}>
                                 <span className={'flex flex-row gap-2'}>
                                     <Image src={user} alt={''} />
-                                     Groupenanzahl:
+                                    {t('tripDesc.group')}:
                                 </span>
 
                                 <span className={'text-[#FF9F47]'}>{tripItem?.group} </span>
                             </div>
-                            <div className={'flex flex-row gap-4 text-black font-semibold'}>
+                            <div className={'flex flex-row gap-4 items-center text-black font-semibold'}>
                                 <span className={'flex flex-row gap-2'}>
                                     <Image src={dollar} alt={''} />
-                                     Reisepreise:
+                                    {t('tripDesc.price')}:
                                 </span>
 
                                 <span className={'text-[#FF9F47]'}>{tripItem?.price} </span>
                             </div>
-                            <div className={'flex flex-row gap-4 text-black font-semibold'}>
-                                <span className={'flex flex-row gap-2'}>
-                                    <Image src={home} alt={''} />
-                                     Unterkunft:
-                                </span>
-
-                                <span className={'text-[#FF9F47]'}>{tripItem?.hotel} </span>
-                            </div>
+                            {
+                                tripItem?.hotel ?
+                                    <div className={'flex flex-row gap-4 text-black font-semibold'}>
+                                        <span className={'flex flex-row gap-2'}>
+                                            <Image src={home} alt={''} />
+                                            {t('tripDesc.accom')}:
+                                        </span>
+                                        <span className={'text-[#FF9F47]'}>{tripItem?.hotel} </span>
+                                    </div>
+                                    :
+                                    <></>
+                            }
                             <div className={'flex flex-row gap-4 text-black font-semibold'}>
                                 <span className={'flex flex-row gap-2'}>
                                     <Image src={send} alt={''} />
-                                     Transport:
+                                    {t('tripDesc.transport')}:
                                 </span>
 
                                 <span className={'text-[#FF9F47]'}>{tripItem?.transport} </span>
@@ -199,7 +203,7 @@ export default function TripSingle() {
                     {
                         trips?.map((item, idx)=> {
                             return (
-                                <CardTrip link={`${item.id}`} text={item?.name} key={idx} src={item?.mainImg} map={`${item.nights}-${item.days}`} members={item?.group} price={item?.price} /> )
+                                <CardTrip link={`${item.id}`} text={item?.name} key={idx} src={item?.mainImg} map={`${item.nights || 0}-${item.days || 0}`} members={item?.group} price={item?.price} /> )
                         })
                     }
                 </div>

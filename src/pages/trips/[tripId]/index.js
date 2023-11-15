@@ -21,7 +21,6 @@ import Link from "next/link";
 import {useEffect} from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import landingBackground from "../../../../public/assets/bg/bgMain.jpg";
 
 export default function TripSingle() {
     const { locale } = useRouter();
@@ -45,7 +44,7 @@ export default function TripSingle() {
     const bgStyle = {
         background: `url(${bg.src}) no-repeat center fixed`,
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
+        backgroundPosition: 'bottom',
         backgroundSize: 'cover',
         position: 'relative',
         height: 400
@@ -188,7 +187,7 @@ export default function TripSingle() {
                             <p>
                                 {t('priceTrip2.title')}:
                             </p>
-                            <ul className={'font-normal text-[14px] px-2'}>
+                            <ul className={'font-normal text-[16px] px-2'}>
                                 <li>
                                     - {t('priceTrip2.item1')};
                                 </li>
